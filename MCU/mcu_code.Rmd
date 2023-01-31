@@ -1,0 +1,67 @@
+---
+title: "MCU_AdjacencyMatrix"
+author: "Danny Kho"
+date: "31/03/2022"
+output: word_document
+always_allow_html: yes
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(igraph)
+library(dplyr)
+library(ggplot2)
+library(RColorBrewer)
+library(heatmaply)
+
+```
+
+```{r}
+#Loading the graph file.
+g <- read.graph("marvel-graph.graphml.xml", format = c("graphml"))
+#Converting the graph file to an adjacency matrix.
+netmatrix <- get.adjacency(g) %>% as.matrix()
+
+
+#Generating colours for the matrix
+no.colour <- rgb(233, 236, 239, max = 255)
+yes.colour <- rgb(255, 183, 3, max = 255)
+
+#Plotting the matrix
+# heatmaply(netmatrix[1:28, 29:52],
+#           distfun = dist,
+#           dist_method = 'euclidean',
+#           dendrogram = 'both',
+#           seriate = 'OLO',
+#           grid_gap = 0.2,
+#           colors = c(no.colour, yes.colour),
+#           label_names = c("Character", "Movie", "Value"),
+#           k_col = 4, k_row = 8, branches_lwd = 0.3,
+#           dend_hoverinfo = FALSE,hide_colorbar = TRUE,
+#           main = "Marvel Cinematic Universe Character Appearances"
+#           )
+
+
+```
+
+```{r}
+g <- read_graph('marvel-graph.graphml', format = 'graphml')
+g.matrix <- as_adjacency_matrix(g) %>% as.matrix()
+g.matrix.bip <-g.matrix[1:28,29:52]
+
+#Generate a list of unique colours
+qual_col_pals <- brewer.pal.info[brewer.pal.info$category == 'qual',]
+col_vector <- unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
+set.seed(1)
+colours <- sample(col_vector, 52)
+
+# 
+# chorddiag(g.matrix.bip, type = 'bipartite',
+#           categoryNames = c("Movie", "Hero"),
+#           categorynamePadding = 350,
+#           margin = 200,
+#           categorynameFontsize = 14,
+#           showTicks = FALSE, showGroupnames = TRUE,
+#           groupColors = colours)
+```
+
