@@ -1,4 +1,4 @@
-# DataVisualisation
+# Data Visualisation
 
 
 During my coursework I've had the opportunity to learn about data visualisation methods (in particular network visualisation). This repository contains past data visualisation work. 
