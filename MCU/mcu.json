@@ -1,0 +1,868 @@
+{"nodes":[ {
+ "id": "h0",
+"name": "Ant-Man",
+"type": "hero" 
+},
+{
+ "id": "h1",
+"name": "Black Panther",
+"type": "hero" 
+},
+{
+ "id": "h2",
+"name": "Black Widow",
+"type": "hero" 
+},
+{
+ "id": "h3",
+"name": "Captain America",
+"type": "hero" 
+},
+{
+ "id": "h4",
+"name": "Captain Marvel",
+"type": "hero" 
+},
+{
+ "id": "h5",
+"name": "Doctor Strange",
+"type": "hero" 
+},
+{
+ "id": "h6",
+"name": "Drax the Destroyer",
+"type": "hero" 
+},
+{
+ "id": "h7",
+"name": "Falcon",
+"type": "hero" 
+},
+{
+ "id": "h8",
+"name": "Gamora",
+"type": "hero" 
+},
+{
+ "id": "h9",
+"name": "Groot",
+"type": "hero" 
+},
+{
+ "id": "h10",
+"name": "Hawkeye",
+"type": "hero" 
+},
+{
+ "id": "h11",
+"name": "Hulk",
+"type": "hero" 
+},
+{
+ "id": "h12",
+"name": "Iron Man",
+"type": "hero" 
+},
+{
+ "id": "h13",
+"name": "Loki",
+"type": "hero" 
+},
+{
+ "id": "h14",
+"name": "Mantis",
+"type": "hero" 
+},
+{
+ "id": "h15",
+"name": "Nebula",
+"type": "hero" 
+},
+{
+ "id": "h16",
+"name": "Nick Fury",
+"type": "hero" 
+},
+{
+ "id": "h17",
+"name": "Odin",
+"type": "hero" 
+},
+{
+ "id": "h18",
+"name": "Quicksilver",
+"type": "hero" 
+},
+{
+ "id": "h19",
+"name": "Rocket Raccoon",
+"type": "hero" 
+},
+{
+ "id": "h20",
+"name": "Scarlet Witch",
+"type": "hero" 
+},
+{
+ "id": "h21",
+"name": "Spider-Man",
+"type": "hero" 
+},
+{
+ "id": "h22",
+"name": "Star-Lord",
+"type": "hero" 
+},
+{
+ "id": "h23",
+"name": "Thor",
+"type": "hero" 
+},
+{
+ "id": "h24",
+"name": "Vision",
+"type": "hero" 
+},
+{
+ "id": "h25",
+"name": "War Machine",
+"type": "hero" 
+},
+{
+ "id": "h26",
+"name": "Wasp",
+"type": "hero" 
+},
+{
+ "id": "h27",
+"name": "Winter Soldier",
+"type": "hero" 
+},
+{
+ "id": "m0",
+"name": "Ant-Man",
+"type": "movie" 
+},
+{
+ "id": "m1",
+"name": "Ant-Man and the Wasp",
+"type": "movie" 
+},
+{
+ "id": "m2",
+"name": "Avengers: Endgame",
+"type": "movie" 
+},
+{
+ "id": "m3",
+"name": "Avengers: Age of Ultron",
+"type": "movie" 
+},
+{
+ "id": "m4",
+"name": "Avengers: Infinity War",
+"type": "movie" 
+},
+{
+ "id": "m5",
+"name": "Black Panther",
+"type": "movie" 
+},
+{
+ "id": "m6",
+"name": "Captain America: Civil War",
+"type": "movie" 
+},
+{
+ "id": "m7",
+"name": "Captain America: The First Avenger",
+"type": "movie" 
+},
+{
+ "id": "m8",
+"name": "Captain America: The Winter Soldier",
+"type": "movie" 
+},
+{
+ "id": "m9",
+"name": "Captain Marvel",
+"type": "movie" 
+},
+{
+ "id": "m10",
+"name": "Doctor Strange",
+"type": "movie" 
+},
+{
+ "id": "m11",
+"name": "Guardians of the Galaxy",
+"type": "movie" 
+},
+{
+ "id": "m12",
+"name": "Guardians of the Galaxy Vol. 2",
+"type": "movie" 
+},
+{
+ "id": "m13",
+"name": "Guardians of the Galaxy Vol. 3",
+"type": "movie" 
+},
+{
+ "id": "m14",
+"name": "Iron Man",
+"type": "movie" 
+},
+{
+ "id": "m15",
+"name": "Iron Man 2",
+"type": "movie" 
+},
+{
+ "id": "m16",
+"name": "Iron Man 3",
+"type": "movie" 
+},
+{
+ "id": "m17",
+"name": "Spider-Man: Far From Home",
+"type": "movie" 
+},
+{
+ "id": "m18",
+"name": "Spider-Man: Homecoming",
+"type": "movie" 
+},
+{
+ "id": "m19",
+"name": "The Avengers",
+"type": "movie" 
+},
+{
+ "id": "m20",
+"name": "The Incredible Hulk",
+"type": "movie" 
+},
+{
+ "id": "m21",
+"name": "Thor",
+"type": "movie" 
+},
+{
+ "id": "m22",
+"name": "Thor: Ragnarok",
+"type": "movie" 
+},
+{
+ "id": "m23",
+"name": "Thor: The Dark World",
+"type": "movie" 
+} ],
+"links":[ {
+   "source": 0,
+  "target": 28 
+  },
+{
+   "source": 0,
+  "target": 29 
+  },
+{
+   "source": 0,
+  "target": 30 
+  },
+{
+   "source": 0,
+  "target": 34 
+  },
+{
+   "source": 0,
+  "target": 46 
+  },
+{
+   "source": 1,
+  "target": 30 
+  },
+{
+   "source": 1,
+  "target": 32 
+  },
+{
+   "source": 1,
+  "target": 33 
+  },
+{
+   "source": 1,
+  "target": 34 
+  },
+{
+   "source": 2,
+  "target": 30 
+  },
+{
+   "source": 2,
+  "target": 31 
+  },
+{
+   "source": 2,
+  "target": 32 
+  },
+{
+   "source": 2,
+  "target": 34 
+  },
+{
+   "source": 2,
+  "target": 36 
+  },
+{
+   "source": 2,
+  "target": 43 
+  },
+{
+   "source": 2,
+  "target": 47 
+  },
+{
+   "source": 3,
+  "target": 28 
+  },
+{
+   "source": 3,
+  "target": 30 
+  },
+{
+   "source": 3,
+  "target": 31 
+  },
+{
+   "source": 3,
+  "target": 32 
+  },
+{
+   "source": 3,
+  "target": 34 
+  },
+{
+   "source": 3,
+  "target": 35 
+  },
+{
+   "source": 3,
+  "target": 36 
+  },
+{
+   "source": 3,
+  "target": 46 
+  },
+{
+   "source": 3,
+  "target": 47 
+  },
+{
+   "source": 4,
+  "target": 30 
+  },
+{
+   "source": 4,
+  "target": 37 
+  },
+{
+   "source": 5,
+  "target": 30 
+  },
+{
+   "source": 5,
+  "target": 32 
+  },
+{
+   "source": 5,
+  "target": 38 
+  },
+{
+   "source": 5,
+  "target": 50 
+  },
+{
+   "source": 6,
+  "target": 30 
+  },
+{
+   "source": 6,
+  "target": 32 
+  },
+{
+   "source": 6,
+  "target": 39 
+  },
+{
+   "source": 6,
+  "target": 40 
+  },
+{
+   "source": 6,
+  "target": 41 
+  },
+{
+   "source": 7,
+  "target": 28 
+  },
+{
+   "source": 7,
+  "target": 30 
+  },
+{
+   "source": 7,
+  "target": 31 
+  },
+{
+   "source": 7,
+  "target": 32 
+  },
+{
+   "source": 7,
+  "target": 34 
+  },
+{
+   "source": 7,
+  "target": 36 
+  },
+{
+   "source": 8,
+  "target": 30 
+  },
+{
+   "source": 8,
+  "target": 32 
+  },
+{
+   "source": 8,
+  "target": 39 
+  },
+{
+   "source": 8,
+  "target": 40 
+  },
+{
+   "source": 9,
+  "target": 30 
+  },
+{
+   "source": 9,
+  "target": 32 
+  },
+{
+   "source": 9,
+  "target": 39 
+  },
+{
+   "source": 9,
+  "target": 40 
+  },
+{
+   "source": 9,
+  "target": 41 
+  },
+{
+   "source": 10,
+  "target": 30 
+  },
+{
+   "source": 10,
+  "target": 31 
+  },
+{
+   "source": 10,
+  "target": 34 
+  },
+{
+   "source": 10,
+  "target": 47 
+  },
+{
+   "source": 10,
+  "target": 49 
+  },
+{
+   "source": 11,
+  "target": 30 
+  },
+{
+   "source": 11,
+  "target": 31 
+  },
+{
+   "source": 11,
+  "target": 32 
+  },
+{
+   "source": 11,
+  "target": 44 
+  },
+{
+   "source": 11,
+  "target": 47 
+  },
+{
+   "source": 11,
+  "target": 48 
+  },
+{
+   "source": 11,
+  "target": 50 
+  },
+{
+   "source": 12,
+  "target": 30 
+  },
+{
+   "source": 12,
+  "target": 31 
+  },
+{
+   "source": 12,
+  "target": 32 
+  },
+{
+   "source": 12,
+  "target": 34 
+  },
+{
+   "source": 12,
+  "target": 42 
+  },
+{
+   "source": 12,
+  "target": 43 
+  },
+{
+   "source": 12,
+  "target": 44 
+  },
+{
+   "source": 12,
+  "target": 46 
+  },
+{
+   "source": 12,
+  "target": 47 
+  },
+{
+   "source": 12,
+  "target": 48 
+  },
+{
+   "source": 13,
+  "target": 30 
+  },
+{
+   "source": 13,
+  "target": 32 
+  },
+{
+   "source": 13,
+  "target": 47 
+  },
+{
+   "source": 13,
+  "target": 49 
+  },
+{
+   "source": 13,
+  "target": 50 
+  },
+{
+   "source": 13,
+  "target": 51 
+  },
+{
+   "source": 14,
+  "target": 30 
+  },
+{
+   "source": 14,
+  "target": 32 
+  },
+{
+   "source": 14,
+  "target": 40 
+  },
+{
+   "source": 14,
+  "target": 41 
+  },
+{
+   "source": 15,
+  "target": 30 
+  },
+{
+   "source": 15,
+  "target": 32 
+  },
+{
+   "source": 15,
+  "target": 39 
+  },
+{
+   "source": 15,
+  "target": 40 
+  },
+{
+   "source": 16,
+  "target": 31 
+  },
+{
+   "source": 16,
+  "target": 32 
+  },
+{
+   "source": 16,
+  "target": 35 
+  },
+{
+   "source": 16,
+  "target": 36 
+  },
+{
+   "source": 16,
+  "target": 37 
+  },
+{
+   "source": 16,
+  "target": 42 
+  },
+{
+   "source": 16,
+  "target": 43 
+  },
+{
+   "source": 16,
+  "target": 45 
+  },
+{
+   "source": 16,
+  "target": 47 
+  },
+{
+   "source": 16,
+  "target": 49 
+  },
+{
+   "source": 17,
+  "target": 49 
+  },
+{
+   "source": 17,
+  "target": 50 
+  },
+{
+   "source": 17,
+  "target": 51 
+  },
+{
+   "source": 18,
+  "target": 31 
+  },
+{
+   "source": 18,
+  "target": 36 
+  },
+{
+   "source": 19,
+  "target": 30 
+  },
+{
+   "source": 19,
+  "target": 32 
+  },
+{
+   "source": 19,
+  "target": 39 
+  },
+{
+   "source": 19,
+  "target": 40 
+  },
+{
+   "source": 19,
+  "target": 41 
+  },
+{
+   "source": 20,
+  "target": 30 
+  },
+{
+   "source": 20,
+  "target": 31 
+  },
+{
+   "source": 20,
+  "target": 32 
+  },
+{
+   "source": 20,
+  "target": 34 
+  },
+{
+   "source": 20,
+  "target": 36 
+  },
+{
+   "source": 21,
+  "target": 30 
+  },
+{
+   "source": 21,
+  "target": 32 
+  },
+{
+   "source": 21,
+  "target": 34 
+  },
+{
+   "source": 21,
+  "target": 43 
+  },
+{
+   "source": 21,
+  "target": 45 
+  },
+{
+   "source": 21,
+  "target": 46 
+  },
+{
+   "source": 22,
+  "target": 30 
+  },
+{
+   "source": 22,
+  "target": 32 
+  },
+{
+   "source": 22,
+  "target": 39 
+  },
+{
+   "source": 22,
+  "target": 40 
+  },
+{
+   "source": 22,
+  "target": 41 
+  },
+{
+   "source": 23,
+  "target": 30 
+  },
+{
+   "source": 23,
+  "target": 31 
+  },
+{
+   "source": 23,
+  "target": 32 
+  },
+{
+   "source": 23,
+  "target": 38 
+  },
+{
+   "source": 23,
+  "target": 47 
+  },
+{
+   "source": 23,
+  "target": 49 
+  },
+{
+   "source": 23,
+  "target": 50 
+  },
+{
+   "source": 23,
+  "target": 51 
+  },
+{
+   "source": 24,
+  "target": 30 
+  },
+{
+   "source": 24,
+  "target": 31 
+  },
+{
+   "source": 24,
+  "target": 32 
+  },
+{
+   "source": 24,
+  "target": 34 
+  },
+{
+   "source": 25,
+  "target": 30 
+  },
+{
+   "source": 25,
+  "target": 31 
+  },
+{
+   "source": 25,
+  "target": 32 
+  },
+{
+   "source": 25,
+  "target": 34 
+  },
+{
+   "source": 25,
+  "target": 42 
+  },
+{
+   "source": 25,
+  "target": 43 
+  },
+{
+   "source": 25,
+  "target": 44 
+  },
+{
+   "source": 26,
+  "target": 28 
+  },
+{
+   "source": 26,
+  "target": 29 
+  },
+{
+   "source": 26,
+  "target": 30 
+  },
+{
+   "source": 27,
+  "target": 28 
+  },
+{
+   "source": 27,
+  "target": 30 
+  },
+{
+   "source": 27,
+  "target": 32 
+  },
+{
+   "source": 27,
+  "target": 33 
+  },
+{
+   "source": 27,
+  "target": 34 
+  },
+{
+   "source": 27,
+  "target": 35 
+  },
+{
+   "source": 27,
+  "target": 36 
+  } ]} 
