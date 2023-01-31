@@ -1,0 +1,112 @@
+---
+title: "R Notebook"
+output:
+  word_document: default
+  html_notebook: default
+---
+
+
+```{r}
+library(igraph)
+library(RColorBrewer)
+library(networkD3)
+library(plotly)
+library(visNetwork)
+library(dplyr)
+
+
+# Load the graph
+data <- read.graph("got-graph.graphml", format = c("graphml"))
+data.visn <- toVisNetworkData(data)
+
+
+#Colours
+rich.black <- rgb(0,18,25, max =255)
+light.gray <- rgb(206,212,218, max = 255)
+ruby.red <- rgb(155, 34, 38,max=255)
+blue.green <- rgb(148, 210, 210, max =255)
+champagne <- rgb(233,216,166, max = 255)
+alloy.orange <- rgb(202,103,2, max = 255)
+gamborge <- rgb(238,155,0, max = 255)
+silver <- rgb(108, 117, 125, max = 255)
+pale.red <- rgb(254, 109, 115, max =255)
+cultured <- rgb(248,249,250, max = 255)
+gainsboro <- rgb(222,226,230, max = 255)
+davys.grey <- rgb(73,80,87, max = 255)
+
+stark.colour <- rgb(0, 129, 167, max = 255)  
+greyjoy.colour <- rgb(253, 252, 220, max = 255)  
+lannister.colour <- rgb(254, 217, 183, max = 255)  
+baratheon.colour <- rgb(240, 113, 103, max = 255)  
+targaryen.colour <- rgb(0, 175, 185, max = 255)  
+
+```
+
+```{r setting_node_edge_attributes}
+
+data.nodes <-data.visn$nodes
+data.edge <- data.visn$edges
+
+#Setting node parameters
+data.nodes$color.background <- silver                               
+data.nodes$color.border <- rich.black
+data.nodes$color.highlight.background <- 'yellow'
+data.nodes$font.size <- 30
+#Set node size depending on the node degree
+data.nodes$size <- degree(data,mode = 'all')%>% as.vector()*3
+
+#Create node groups for clustering within visualisation
+data.nodes$group <- data.nodes$`house-birth`
+data.nodes['group'][data.nodes['group'] == ''] <- 'None'
+
+
+#Setting edge parameters
+data.edge$arrows <- case_when(data.edge$relation %in% c('killed', 'father','mother', 'allegiance')~ 'to') #These are directed. Others are undirected edges
+#Use a mark to distinguish these edge types
+data.edge$dashes <- case_when(data.edge$relation == 'killed' ~ TRUE, 
+                             data.edge$relation %in% c('lover','spouse', 'father','mother', 'sibling', 'allegiance')~ FALSE)
+# Use colour to further higlight edge types
+data.edge$color <- case_when(data.edge$relation == 'killed' ~ ruby.red, 
+                             data.edge$relation == 'allegiance' ~ alloy.orange, 
+                             data.edge$relation %in% c('father','mother', 'sibling')~ davys.grey,
+                             data.edge$relation %in% c('lover','spouse') ~ pale.red) 
+#Tool tips for nodes and edges
+data.edge$title <- sapply(paste0("<p>", data.edge$from, "<br>", "<b>", data.edge$relation,"</b>", "<br>",data.edge$to, "</p>"), as.character)
+data.nodes$title <- sapply(paste0("<p>", data.nodes$status, "</p>"), as.character)
+
+
+
+#Setting legend
+legend.nodes <- data.frame(label = c('House Stark', 'House Greyjoy', 'House Lannister', 'House Baratheon', "House Targaryen"),
+                           shape = c('dot'),
+                           color.background = c(stark.colour, greyjoy.colour, lannister.colour, baratheon.colour, targaryen.colour),
+                           color.border = rich.black,
+                           size = 25)
+
+legend.edges <- data.frame(label = c('Killed', 'Allegiance', 'Lover or Spouse','Father, Mother or Sibling'),
+                           color = c(ruby.red, alloy.orange, pale.red, davys.grey),
+                           font.color = 'black',
+                           font.size = 14,
+                           font.face = 'arial',
+                           font.align = 'bottom')
+
+```
+
+```{r}
+visNetwork(nodes = data.nodes, edge =data.edge, main = "Game of Thrones Relationship Network",
+           submain = "Double click on a house node to uncluster. Hover over a node or edge for attribute details.",
+           footer = 'Use buttons or mouse to navigate view',
+           width = 2000, height = 1000) %>% 
+  visPhysics(solver = 'forceAtlas2Based', forceAtlas2Based = list(gravitationalConstant = -150, avoidOverlap = 1), stabilization = TRUE, adaptiveTimestep = TRUE) %>%
+  visGroups(groupname = 'House Stark', color = stark.colour) %>% visGroups(groupname = 'House Greyjoy', color = greyjoy.colour) %>% visGroups(groupname = 'House Lannister', color = lannister.colour) %>% visGroups(groupname = 'House Baratheon', color = baratheon.colour) %>% visGroups(groupname = 'House Targaryen', color = targaryen.colour) %>%
+  visClusteringByGroup(groups = c('House Stark', 'House Greyjoy', 'House Lannister', 'House Baratheon', "House Targaryen"),
+                       label = "", force = TRUE,
+                       shape = 'dot',
+                       color = c(stark.colour, greyjoy.colour, lannister.colour, baratheon.colour, targaryen.colour),
+                       scale_size = TRUE) %>%
+  visOptions(nodesIdSelection = TRUE) %>% 
+  visLegend(addNodes = legend.nodes,addEdges = legend.edges, useGroups = FALSE, main = "Legend", width = 0.1) %>% 
+  visInteraction(hoverConnectedEdges = TRUE, keyboard = TRUE, navigationButtons = TRUE) %>% 
+  visLayout(improvedLayout = TRUE,randomSeed = 1000) %>% visSave('got_FR.html')
+
+```
